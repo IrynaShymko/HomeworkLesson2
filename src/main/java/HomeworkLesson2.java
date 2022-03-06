@@ -36,7 +36,7 @@ public class HomeworkLesson2 {
                         generateToken(length);
                         needToTryAgainEnterTokenLength = false;
                     } else if (length == 0) {
-                        System.out.println("Program is stopped.");
+                        System.out.println("Program is stopped");
                         needToTryAgainEnterTokenLength = false;
                     } else {
                         System.out.println("Incorrect value. Allowed values: 5, 10, 15.");
