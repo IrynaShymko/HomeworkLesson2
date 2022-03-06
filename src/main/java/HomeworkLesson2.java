@@ -25,7 +25,7 @@ public class HomeworkLesson2 {
 
     static StringBuilder tokenGenerator() {
         System.out.println("Hello, please type an length of token. Allowed values: 5, 10, 15.");
-        System.out.println("Try again or enter 0 to stop the program.");
+        System.out.println("You can enter 0 to stop the program.");
 
         while (needToTryAgainEnterTokenLength) {
             Scanner scanner = new Scanner(System.in);
