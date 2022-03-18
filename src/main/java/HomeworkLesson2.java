@@ -9,6 +9,8 @@ public class HomeworkLesson2 {
     static boolean needToGenerateNextTokenCharacter = true;
     static List<Integer> listAllowedChar = Arrays.asList(notAllowedChar);
     static boolean needToTryAgainEnterTokenLength = true;
+    static Integer[] allowedTokenLength = {5, 10, 15};
+    static List<Integer> listAllowedTokenLength = Arrays.asList(allowedTokenLength);
 
     static void generateToken(int size) {
         for (int i = 0; i < size; i++) {
@@ -32,7 +34,7 @@ public class HomeworkLesson2 {
             try {
                 while (needToTryAgainEnterTokenLength) {
                     int length = scanner.nextInt();
-                    if (length == 5 || length == 10 || length == 15) {
+                    if (listAllowedTokenLength.contains(length)) {
                         generateToken(length);
                         needToTryAgainEnterTokenLength = false;
                     } else if (length == 0) {
@@ -49,9 +51,4 @@ public class HomeworkLesson2 {
             }
         }
         return token;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(tokenGenerator());
-    }
-}
+    }}
